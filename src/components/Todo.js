@@ -3,7 +3,7 @@ import React from 'react'
 import style from './todo.module.css'
 
 const Todo = (props) => {
-    const {id, title, desc} = props.todo;
+    const {title, desc} = props.todo;
   return (
 
     <article className={style.todo}>

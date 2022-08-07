@@ -7,7 +7,7 @@ const Todos = (props) => {
 
   return (
     <section className={style.todos}>
-        {props.todos.map( (item) => <Todo todo={item} key={item.title} /> )} 
+        {props.todos.map( (item) => <Todo todo={item.todo}  key={item.id}/> )} 
     </section>
   )
 }

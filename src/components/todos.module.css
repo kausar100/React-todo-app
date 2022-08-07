@@ -5,4 +5,5 @@
     height: 50vh;
     padding: .6rem;
     border-radius: .3rem;
+    overflow: scroll;
 }
