@@ -4,6 +4,11 @@ import style from './todo.module.css'
 
 const Todo = (props) => {
     const {title, desc} = props.todo;
+
+    const deleteItem = (id) =>{
+      props.deleteTodo(id);
+    }
+    
   return (
 
     <article className={style.todo}>
@@ -12,7 +17,8 @@ const Todo = (props) => {
         <p>{desc}</p>
         </div>
         
-        <div><button><i className='fa fa-trash fa-2x'></i></button></div>
+        <div><button
+        onClick={()=>{deleteItem(props.id)}}><i className='fa fa-trash fa-2x'></i></button></div>
     </article>
   )
 }

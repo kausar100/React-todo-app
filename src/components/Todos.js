@@ -5,9 +5,14 @@ import style from './todos.module.css'
 
 const Todos = (props) => {
 
+  const deleleId = (id)=>{
+    props.removeTodos(id);
+
+  }  
+
   return (
     <section className={style.todos}>
-        {props.todos.map( (item) => <Todo todo={item.todo}  key={item.id}/> )} 
+        {props.todos.map( (item) => <Todo deleteTodo={deleleId} todo={item.todo}  key={item.id} id={item.id}/> )} 
     </section>
   )
 }
